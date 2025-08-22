@@ -1,0 +1,496 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #9e81c3aa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #8260a8aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Top Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f7f3f9; /* soft cream */
+  padding: 1rem 2rem;
+  color: #4a3c6b; /* muted deep purple */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #4a3c6b;
+}
+
+.navbar-links {
+  margin-left: auto;       
+  display: flex;
+  gap: 1.5rem;            
+  padding-right: 2rem;     
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #4a3c6b;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s ease-in-out;
+}
+
+.navbar-links a:hover {
+  background-color: #e3d9f1;
+}
+
+body {
+  margin-top: 70px; 
+}
+
+.Dbheader {
+  background-color: #f7f3f9;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.Dbheader h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4a3c6b;
+}
+
+.Dbnav {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #f7f3f9;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.Dbnav a {
+  text-decoration: none;
+  color: #4a3c6b;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s ease-in-out;
+}
+
+.Dbnav a:hover {
+  background-color: #e3d9f1;
+}
+
+.Dbcontent {
+  margin-top: 120px; 
+  padding: 1rem;
+}
+
+.add-session-btn {
+  background-color: #8260a8;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-session-btn:hover {
+  background-color: #9e81c3;
+}
+
+.add-session-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.add-session-card {
+  background: #fefaf4;  /* soft cream */
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(150, 130, 180, 0.2);
+}
+
+.add-session-card h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #4a3c6b;
+}
+
+.add-session-card input,
+.add-session-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbb8e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.add-session-card input:focus,
+.add-session-card textarea:focus {
+  border-color: #9e81c3;
+}
+
+.add-session-card textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-session-card button {
+  width: 100%;
+  background: #9e81c3;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-session-card button:hover {
+  background: #8260a8;
+}
+
+/* Sessions */
+.sessions-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sessions-wrapper {
+  background: #fefaf4;   /* soft cream/yoga background */
+  min-height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  margin: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.session-card {
+  background: #f0e6f6; /* soft lavender */
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(150, 130, 180, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(150, 130, 180, 0.3);
+}
+
+.session-card strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.session-card small {
+  color: #666;
+}
+
+.session-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.session-meta span {
+  display: inline;
+}
+
+/* Login wrapper */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #333;
+  padding: 2rem;
+}
+
+/* Login card */
+.login-card {
+  background: #f0e6f6; /* soft lavender */
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(150, 130, 180, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Card header */
+.login-card h2 {
+  margin-bottom: 1.5rem;
+  color: #4a3c6b; 
+  font-size: 1.8rem;
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbb8e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-card input:focus {
+  border-color: #9e81c3;
+}
+
+/* Submit button */
+.login-card button {
+  width: 100%;
+  background-color: #8260a8; 
+  color: #8260a8;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-card button:hover {
+  background-color: #9e81c3;
+}
+
+
+.login-card small {
+  display: block;
+  margin-top: 10px;
+  color: #4a3c6b;
+  cursor: pointer;
+}
+
+.login-card small:hover {
+  text-decoration: underline;
+}
+/* Signup wrapper */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #fefaf4;
+  padding: 2rem;
+}
+
+/* Signup card */
+.signup-card {
+  background: #f0e6f6; 
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(150, 130, 180, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Card header */
+.signup-card h2 {
+  margin-bottom: 1.5rem;
+  color: #4a3c6b; 
+}
+
+/* Inputs */
+.signup-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cbb8e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.signup-card input:focus {
+  border-color: #9e81c3;
+}
+
+/* Submit button */
+.signup-card button {
+  width: 100%;
+  background-color: #8260a8; 
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-card button:hover {
+  background-color: #9e81c3;
+}
+
+
+.signup-card small {
+  display: block;
+  margin-top: 10px;
+  color: #4a3c6b;
+  cursor: pointer;
+}
+
+.signup-card small:hover {
+  text-decoration: underline;
+}
+/*mysesssion*/
+.mysessions-title{
+  color: #dedede;
+}
+.mysessions-wrapper {
+  background: transparent;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  margin: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.mysessions-grid {
+   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.mysession-card {
+  background: #f0e6f6; 
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(150, 130, 180, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mysession-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(150, 130, 180, 0.3);
+}
+
+.mysession-card h3,
+.mysession-card p {
+  margin-bottom: 0.5rem;
+}
+
+.mysession-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.mysession-meta span {
+  display: inline;
+}
+
+
+.mysession-card button {
+  background-color: #8260a8;  
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mysession-card button:hover {
+  background-color: #9e81c3;
+}
+
+.mysession-card input,
+.mysession-card textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border: 1px solid #cbb8e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.mysession-card input:focus,
+.mysession-card textarea:focus {
+  border-color: #9e81c3;
+}

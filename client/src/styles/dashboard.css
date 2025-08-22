@@ -1,0 +1,49 @@
+/* Top heading box */
+.Dbheader {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.Dbheader h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #08344d;
+}
+
+/* Fixed Add Session bar */
+.Dbnav {
+  position: fixed;
+  top: 70px; /* height of header */
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.Dbnav a {
+  text-decoration: none;
+  color: #08344d;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s ease-in-out;
+}
+
+.Dbnav a:hover {
+  background-color: #d1e8ff;
+}
+
+/* Content section below both fixed bars */
+.Dbcontent {
+  margin-top: 130px; /* header (70px) + nav bar (60px) */
+  padding: 1rem 2rem;
+}
